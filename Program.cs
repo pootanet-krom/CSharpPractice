@@ -1,26 +1,21 @@
-﻿Console.WriteLine("Grading (0 - 100)");
-Console.Write("Enter your point: ");
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 
-
-if (double.TryParse(Console.ReadLine(), out double score))
+Console.WriteLine("Multiplication");
+Console.Write("Enter a number: ");
+if (int.TryParse(Console.ReadLine(), out int number))
 {
-    if (score < 0 || score > 100)
-        Console.WriteLine("Invalid score!");
-    else if (score >= 80)
-        Console.WriteLine("Grade: A");
-    else if (score >= 70)
-        Console.WriteLine("Grade: B");
-    else if (score >= 60)
-        Console.WriteLine("Grade: C");
-    else if (score >= 50)
-        Console.WriteLine("Grade: D");
-    else
-        Console.WriteLine("Grade: F");
+    Console.WriteLine($"Multiplication table {number}");
+
+
+    for (int i = 1; i <= 12; i++){
+        int result = number * i;
+        Console.WriteLine($"{number} x {i} = {result}");
+
+    }
 }
 else
 {
-    Console.WriteLine("Please enter a valid number.");
+    Console.WriteLine("Please enter a valid integer");
 }
-
 Console.WriteLine("\nPress any key to exit...");
 Console.ReadKey();
