@@ -1,5 +1,3 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
 Console.WriteLine("Multiplication");
 Console.Write("Enter a number: ");
 if (int.TryParse(Console.ReadLine(), out int number))
